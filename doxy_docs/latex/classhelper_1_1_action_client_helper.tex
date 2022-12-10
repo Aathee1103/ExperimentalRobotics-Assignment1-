@@ -1,0 +1,151 @@
+\hypertarget{classhelper_1_1_action_client_helper}{}\doxysection{helper.\+Action\+Client\+Helper Class Reference}
+\label{classhelper_1_1_action_client_helper}\index{helper.ActionClientHelper@{helper.ActionClientHelper}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhelper_1_1_action_client_helper_a9a9ebc43a5fefd2f60ce81e031b6e8cf}\label{classhelper_1_1_action_client_helper_a9a9ebc43a5fefd2f60ce81e031b6e8cf}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, service\+\_\+name, action\+\_\+type, done\+\_\+callback=None, feedback\+\_\+callback=None, mutex=None)
+\item 
+def \mbox{\hyperlink{classhelper_1_1_action_client_helper_a3ef1d0aa8ccb9cc4953b195161fc6042}{send\+\_\+goal}} (self, goal)
+\item 
+def \mbox{\hyperlink{classhelper_1_1_action_client_helper_ab21f7715519067f6afc749b1301cfc4f}{cancel\+\_\+goals}} (self)
+\item 
+def \mbox{\hyperlink{classhelper_1_1_action_client_helper_a274e7f60ebb14a959483cb537d1e02eb}{reset\+\_\+client\+\_\+states}} (self)
+\item 
+def \mbox{\hyperlink{classhelper_1_1_action_client_helper_a5f1b3c325ad7041ae157429936adcd21}{feedback\+\_\+callback\+\_\+}} (self, feedback)
+\item 
+def \mbox{\hyperlink{classhelper_1_1_action_client_helper_a6078390ea91a842ccb65933565a14b19}{done\+\_\+callback\+\_\+}} (self, status, results)
+\item 
+def \mbox{\hyperlink{classhelper_1_1_action_client_helper_af97b6d760c5c182589700634da02c87d}{is\+\_\+done}} (self)
+\item 
+def \mbox{\hyperlink{classhelper_1_1_action_client_helper_ad89e3d1883da188dff42984f4b68ee70}{is\+\_\+running}} (self)
+\item 
+def \mbox{\hyperlink{classhelper_1_1_action_client_helper_ad3d1dcef5fee2816729f8b51bee577ba}{get\+\_\+results}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class that simplifies the implementation of a client for ROS action servers.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhelper_1_1_action_client_helper_ab21f7715519067f6afc749b1301cfc4f}\label{classhelper_1_1_action_client_helper_ab21f7715519067f6afc749b1301cfc4f}} 
+\index{helper.ActionClientHelper@{helper.ActionClientHelper}!cancel\_goals@{cancel\_goals}}
+\index{cancel\_goals@{cancel\_goals}!helper.ActionClientHelper@{helper.ActionClientHelper}}
+\doxysubsubsection{\texorpdfstring{cancel\_goals()}{cancel\_goals()}}
+{\footnotesize\ttfamily def helper.\+Action\+Client\+Helper.\+cancel\+\_\+goals (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fucntion to Stop the computation of the action server.
+
+Args:
+    None
+    
+Returns:
+    None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classhelper_1_1_action_client_helper_a6078390ea91a842ccb65933565a14b19}\label{classhelper_1_1_action_client_helper_a6078390ea91a842ccb65933565a14b19}} 
+\index{helper.ActionClientHelper@{helper.ActionClientHelper}!done\_callback\_@{done\_callback\_}}
+\index{done\_callback\_@{done\_callback\_}!helper.ActionClientHelper@{helper.ActionClientHelper}}
+\doxysubsubsection{\texorpdfstring{done\_callback\_()}{done\_callback\_()}}
+{\footnotesize\ttfamily def helper.\+Action\+Client\+Helper.\+done\+\_\+callback\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{status,  }\item[{}]{results }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function called when the action server has finished its computation.
+
+Args:
+    status: status of the action server
+    results: results from the action server
+    
+Returns:
+    None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classhelper_1_1_action_client_helper_a5f1b3c325ad7041ae157429936adcd21}\label{classhelper_1_1_action_client_helper_a5f1b3c325ad7041ae157429936adcd21}} 
+\index{helper.ActionClientHelper@{helper.ActionClientHelper}!feedback\_callback\_@{feedback\_callback\_}}
+\index{feedback\_callback\_@{feedback\_callback\_}!helper.ActionClientHelper@{helper.ActionClientHelper}}
+\doxysubsubsection{\texorpdfstring{feedback\_callback\_()}{feedback\_callback\_()}}
+{\footnotesize\ttfamily def helper.\+Action\+Client\+Helper.\+feedback\+\_\+callback\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{feedback }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function called when the action server has to send a feedback to the client.
+
+Args:
+    feedback: feedback message to be sent to the client
+    
+Returns:
+    None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classhelper_1_1_action_client_helper_ad3d1dcef5fee2816729f8b51bee577ba}\label{classhelper_1_1_action_client_helper_ad3d1dcef5fee2816729f8b51bee577ba}} 
+\index{helper.ActionClientHelper@{helper.ActionClientHelper}!get\_results@{get\_results}}
+\index{get\_results@{get\_results}!helper.ActionClientHelper@{helper.ActionClientHelper}}
+\doxysubsubsection{\texorpdfstring{get\_results()}{get\_results()}}
+{\footnotesize\ttfamily def helper.\+Action\+Client\+Helper.\+get\+\_\+results (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function that gets the result of the action server.
+
+Args:
+    None
+    
+Returns:
+    Result of the action server, if any, 'None' otherwise
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classhelper_1_1_action_client_helper_af97b6d760c5c182589700634da02c87d}\label{classhelper_1_1_action_client_helper_af97b6d760c5c182589700634da02c87d}} 
+\index{helper.ActionClientHelper@{helper.ActionClientHelper}!is\_done@{is\_done}}
+\index{is\_done@{is\_done}!helper.ActionClientHelper@{helper.ActionClientHelper}}
+\doxysubsubsection{\texorpdfstring{is\_done()}{is\_done()}}
+{\footnotesize\ttfamily def helper.\+Action\+Client\+Helper.\+is\+\_\+done (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function Get `True` if the action server finished is computation, or `False` otherwise.
+
+Args:
+    None
+    
+Returns:
+    Bool: 'True' if the action server finished its computation, 'False' otherwise
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classhelper_1_1_action_client_helper_ad89e3d1883da188dff42984f4b68ee70}\label{classhelper_1_1_action_client_helper_ad89e3d1883da188dff42984f4b68ee70}} 
+\index{helper.ActionClientHelper@{helper.ActionClientHelper}!is\_running@{is\_running}}
+\index{is\_running@{is\_running}!helper.ActionClientHelper@{helper.ActionClientHelper}}
+\doxysubsubsection{\texorpdfstring{is\_running()}{is\_running()}}
+{\footnotesize\ttfamily def helper.\+Action\+Client\+Helper.\+is\+\_\+running (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function Get `True` if the action server is running, or `False` otherwise.
+
+Args:
+    None
+    
+Returns:
+    Bool: `True` if the action server is running, `False` otherwise
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classhelper_1_1_action_client_helper_a274e7f60ebb14a959483cb537d1e02eb}\label{classhelper_1_1_action_client_helper_a274e7f60ebb14a959483cb537d1e02eb}} 
+\index{helper.ActionClientHelper@{helper.ActionClientHelper}!reset\_client\_states@{reset\_client\_states}}
+\index{reset\_client\_states@{reset\_client\_states}!helper.ActionClientHelper@{helper.ActionClientHelper}}
+\doxysubsubsection{\texorpdfstring{reset\_client\_states()}{reset\_client\_states()}}
+{\footnotesize\ttfamily def helper.\+Action\+Client\+Helper.\+reset\+\_\+client\+\_\+states (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to reset the client state variables stored in this class.
+
+Args:
+    None
+    
+Returns:
+    None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classhelper_1_1_action_client_helper_a3ef1d0aa8ccb9cc4953b195161fc6042}\label{classhelper_1_1_action_client_helper_a3ef1d0aa8ccb9cc4953b195161fc6042}} 
+\index{helper.ActionClientHelper@{helper.ActionClientHelper}!send\_goal@{send\_goal}}
+\index{send\_goal@{send\_goal}!helper.ActionClientHelper@{helper.ActionClientHelper}}
+\doxysubsubsection{\texorpdfstring{send\_goal()}{send\_goal()}}
+{\footnotesize\ttfamily def helper.\+Action\+Client\+Helper.\+send\+\_\+goal (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{goal }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} A new goal can be given to the action server only if it is not running. This simplification implies that
+  within the ROS architecture no more than one client can use the same server at the same time.
+
+Args:
+    goal(PlanGoal): goal to be sent made up of two Points, start and target in (x, y) coordinates
+
+Returns:
+    None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+scripts/helper.\+py\end{DoxyCompactItemize}
