@@ -20,7 +20,7 @@
     <rosparam param="test/random_sense/battery_time"> [15.0, 40.0] </rosparam>
     <!-- Run FSM and other nodes required -->
     <node pkg = "assignment_1"  
-          type = "Finite_state_machine.py"      
+          type = "finite_statemachine.py"      
           name = "Finite_state_machine" 
           launch-prefix = "xterm -fa 'Monospace' -fs 10 -e"
     > </node>
