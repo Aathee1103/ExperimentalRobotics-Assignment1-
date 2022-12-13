@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 """
-.. module:: load_ontology
+.. module:: load_environment
     :platform: Unix
 
 .. moduleauthor:: Aatheethyaa Dhanasekaran
@@ -21,7 +21,7 @@ path = dirname(realpath(__file__))
 # path of .owl file
 path = path + "/../topological_map/"
 
-
+# Initializing with buffered manipulation and reasoning
 client.utils.load_ref_from_file(path + "topological_map.owl", "http://bnc/exp-rob-lab/2022-23", True, "PELLET", False, False)
 
 client.utils.mount_on_ref()

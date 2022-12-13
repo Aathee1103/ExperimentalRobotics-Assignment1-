@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 """
-.. File:: robot_states
+.. module:: robot_states
     :synopsis: Python module for the publisher of the state of the battery.
 
-..author:: Aatheethyaa Dhanasekaran
+..moduleauthor:: Aatheethyaa Dhanasekaran
 
 
 Publisher:
@@ -13,6 +13,7 @@ Publisher:
 Servers: 
     /state/set_pose: server to set the current robot pose
     /state/get_pose: server to get the current robot pose
+    
 """
 
 import threading

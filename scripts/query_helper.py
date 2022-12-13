@@ -1,12 +1,13 @@
 #! /usr/bin/env python3
 
 """
-.. module:: robot_actions
-   :platform: Unix
+
+.. module:: query_helper
 
 .. moduleauthor:: Aatheethyaa Dhanasekaran
 
-   Node that helps to Query he ontology for evry robot movement and selecting location to move
+:synopsis:Node that helps to Query the ontology for every robot movement and selecting location to move
+   
 """
 # Import ROS libraries.
 import random

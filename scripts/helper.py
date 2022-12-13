@@ -1,22 +1,21 @@
 #!/usr/bin/env python3
 
 """
-.. File:: helper
+..module::helper
 
-    :synopsis: A node which has interfacehelper and Aactionclienthelper to help the Finite state machine to about the condition of action client
-    and the execute the battery stimulus
+:synopsis:A node which has interfacehelper and Actionclienthelper to help the Finite state machine to about the condition of action client and the execute the battery stimulus
+
+..moduleauthor::Aatheethyaa Dhanasekaran
+
+Clients:
+    :armor_client- client to communicate with the aRMOR server
+    :motion/planner- client to communicate with the planner server, which plans a random path with via points
+    :motion/controller- client to communicate with the controller server, which has to follow the path provided by the planner server
+Subscribers:
+    :state/battery_low- where the state of the battery (high/low) is published
+Servers:
+    :state/set_pose- server to set the current robot pose in robot-states node
     
-..  author:: Aatheethyaa Dhanasekaran
-    Clients:
-    /armor_client- client to communicate with the aRMOR server
-    /motion/planner- client to communicate with the planner server, which plans a random path with via points
-    /motion/controller- client to communicate with the controller server, which has to follow the path provided by the planner server
-
-    Subscribers:
-    /state/battery_low- where the state of the battery (high/low) is published
-
-     Servers:
-    /state/set_pose- server to set the current robot pose in robot-states node
 """
 
 import rospy
