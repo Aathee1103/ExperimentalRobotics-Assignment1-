@@ -19,7 +19,7 @@ where the robot-state node sends the battery level to the Finite_state_machine a
 To run the assignment and to visualize the working of statemachine(SMACH),follow the steps mentioned below.
 ```
 $ cd ros_ws/src/
-$ git clone "git@github.com:Aathee1103/ExperimentalRobotics-Assignment1-.git"
+$ git clone "https://github.com/Aathee1103/ExperimentalRobotics-Assignment1-"
 $ build using catkin_make
 ```
 After building the workspace successfully,Run the Exprob1.launch file using:
