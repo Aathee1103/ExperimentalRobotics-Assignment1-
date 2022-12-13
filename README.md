@@ -40,6 +40,8 @@ This node has interfacehelper and actionclient helper for making it easier to th
 This node is very important to query the position of robot and hold everything in a list and move the robot to a position accordingly.
 ### 5)Finite_state_machine.py
 This is heart of all the nodes indicating the change in states where twoaction sever helps the robot to obtain a specific state according to the required condition.
+### 6)topological_map
+Inside the topological_map folder the otology roles,concepts and indiiduals are added with the help of **Protege**.
 
 
 ## 7)Limitations:
