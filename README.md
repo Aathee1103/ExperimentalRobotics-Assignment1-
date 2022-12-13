@@ -45,6 +45,7 @@ This is heart of all the nodes indicating the change in states where twoaction s
 ## 7)Limitations:
 The robot's behaviour is depend upon the fixed map.if the map changes the robot's behavior may not work properly.the robot's battery status often changes to low level tatus because of the randomness and this should be improved.And when the robot's battery is low when it is in one of the rooms.it positon directly changes to location E.this should be improved with reaching the corridor C1 or C2and then it should each to the charging location.the monitoring time is given with a sleep function but that does not work that much well so this should be done using a server.which will be a good enough system.the robot most of the time receiving a urgency room so most of the time its not monitoring the corridor so the time of monitoring the corridor should be increased more.
 
+## 8)Documentaion part is done in the folder sphinx after cloning the repository,it can be visualized using **index.html** file.
 
 ## 8)Done By:
 Aatheethyaa Dhanasekaran(5051520)
