@@ -8,7 +8,7 @@ The above figure represents the map of the environment which consists of four ro
 
 # 3)Working:
 ![Exprob1](https://user-images.githubusercontent.com/80621864/207284327-4535668a-4429-44a3-9208-8ddcd7c20b84.gif)
-The above shown video explains the overall working of this assignment,where the robot initially starts from location **E** and when the Map is loaed,the robot reaches any one of the Corridor **C1** or **C2** then it stays there until an urgency arrives.if there is an urgency the robot visits the nearby room.if there are two or more urgency rooms the priority is given based upon the timestamp property.the **Armor** package is used to query to know the robot position,timestamp.if the battery is low the robot should reach location **E** and charge until battery is full.
+The above shown video explains the overall working of this assignment,where the robot initially starts from location **E** and when the Map is loaed,the robot reaches any one of the Corridor **C1** or **C2** then it stays there until an urgency arrives.if there is an urgency the robot visits the nearby room.if there are two or more urgency rooms the priority is given based upon the timestamp property.the **Armor** package is used to query to know the robot position,timestamp.if the battery is low the robot should reach location **E** and charge until battery is full.the robot has two nested state machine which is known as Corridor and room,if the target to be reached becomes Corridor then the decided location will be set to corridor and the state changes will occure within the Corridor statemachine.if there is an urgency,the robot changes its state to be in the Room statemachine. 
 
 ## 4)The Software Architecture:
 ![fsm drawio](https://user-images.githubusercontent.com/80621864/207285992-d146080c-bc5b-45cd-af50-1efe4086151c.png)
@@ -19,12 +19,12 @@ where the robot-state node sends the battery level to the Finite_state_machine a
 To run the assignment and to visualize the working of statemachine(SMACH),follow the steps mentioned below.
 ```
 $ cd ros_ws/src/
-$ git clone "git@github.com:Aathee1103/ExperimentalRobotics-Assignment1-.git"
+$ git clone "https://github.com/Aathee1103/ExperimentalRobotics-Assignment1-"
 $ build using catkin_make
 ```
 After building the workspace successfully,Run the Exprob1.launch file using:
 ```
-$ roslaunch exprob1.launch
+$ roslaunch assignment_1 exprob1.launch
 to visualize the change in states of the robot,run smach_viewer using the command below:
 $ rosrun smach_viewer smach_viewer.py
 ```
@@ -40,8 +40,17 @@ This node has interfacehelper and actionclient helper for making it easier to th
 This node is very important to query the position of robot and hold everything in a list and move the robot to a position accordingly.
 ### 5)Finite_state_machine.py
 This is heart of all the nodes indicating the change in states where twoaction sever helps the robot to obtain a specific state according to the required condition.
+### 6)topological_map
+Inside the topological_map folder the otology roles,concepts and indiiduals are added with the help of **Protege**.
+## 7)Controller.py and planner.py has been used from professor Luca buoncompagni's **arch_skeleton** package to used in this assignment.
 
 
 ## 7)Limitations:
 The robot's behaviour is depend upon the fixed map.if the map changes the robot's behavior may not work properly.the robot's battery status often changes to low level tatus because of the randomness and this should be improved.And when the robot's battery is low when it is in one of the rooms.it positon directly changes to location E.this should be improved with reaching the corridor C1 or C2and then it should each to the charging location.the monitoring time is given with a sleep function but that does not work that much well so this should be done using a server.which will be a good enough system.the robot most of the time receiving a urgency room so most of the time its not monitoring the corridor so the time of monitoring the corridor should be increased more.
 
+## 8)Documentaion part is done in the folder sphinx after cloning the repository,it can be visualized using **index.html** file.
+
+## 8)Done By:
+Aatheethyaa Dhanasekaran(5051520)
+
+Email:aatheethya2703@gmail.com
